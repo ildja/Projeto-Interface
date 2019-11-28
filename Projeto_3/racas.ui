@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Racas</class>
+ <widget class="QDialog" name="Racas">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1374</width>
+    <height>730</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="akila">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>131</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="america">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>0</y>
+     <width>121</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="basset">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>0</y>
+     <width>131</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="beagle">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>0</y>
+     <width>121</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bichon">
+   <property name="geometry">
+    <rect>
+     <x>560</x>
+     <y>0</y>
+     <width>121</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="boiadeiro">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>0</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="border">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>0</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="boston">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>0</y>
+     <width>131</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="boxer">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>0</y>
+     <width>131</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="buldogue">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>0</y>
+     <width>131</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bulldogueingles">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>120</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="bull">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>120</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cane">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>120</y>
+     <width>101</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cavalier">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>120</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="chihuahua">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>120</y>
+     <width>131</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="chowchow">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>120</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cocker">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>120</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dachshund">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>120</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dalmata">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>130</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="doberman">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>130</y>
+     <width>131</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_golden">
+   <property name="geometry">
+    <rect>
+     <x>1094</x>
+     <y>310</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Golden retriever</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_lhasa">
+   <property name="geometry">
+    <rect>
+     <x>823</x>
+     <y>310</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Lhasa apso</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_mastiff">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>420</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mastiff inglês</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_mastim">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>420</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mastim tibetano</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pastor_alemao">
+   <property name="geometry">
+    <rect>
+     <x>281</x>
+     <y>420</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pastor alemão</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pastor_autraliano">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>420</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pastor australiano</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pastor_shetland">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>420</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pastor de Shetland</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pastor_maremano">
+   <property name="geometry">
+    <rect>
+     <x>688</x>
+     <y>420</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pastor Maremano A.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pequines">
+   <property name="geometry">
+    <rect>
+     <x>823</x>
+     <y>420</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pequinês</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pinscher">
+   <property name="geometry">
+    <rect>
+     <x>959</x>
+     <y>420</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pinscher miniatura</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pit">
+   <property name="geometry">
+    <rect>
+     <x>1094</x>
+     <y>420</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pit bull</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_poodle">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>420</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Poodle</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pug">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>530</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pug</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_rottweiler">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>530</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Rottweiler</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_samoieda">
+   <property name="geometry">
+    <rect>
+     <x>281</x>
+     <y>530</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Samoieda</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_schnauzer">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>530</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Schnauzer</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_shar">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>530</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Shar-pei</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_shiba">
+   <property name="geometry">
+    <rect>
+     <x>688</x>
+     <y>530</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Shiba</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_shih">
+   <property name="geometry">
+    <rect>
+     <x>823</x>
+     <y>530</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Shih tzu</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_staffordshire">
+   <property name="geometry">
+    <rect>
+     <x>959</x>
+     <y>530</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Staffordshire bull t.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_terra">
+   <property name="geometry">
+    <rect>
+     <x>1094</x>
+     <y>530</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Terra nova</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_vira">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>530</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Vira-lata</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_maltes">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>310</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Maltês</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_lulu">
+   <property name="geometry">
+    <rect>
+     <x>959</x>
+     <y>310</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Lulu da Pomerânia</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_labrador">
+   <property name="geometry">
+    <rect>
+     <x>688</x>
+     <y>310</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Labrador retriever</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_jack">
+   <property name="geometry">
+    <rect>
+     <x>552</x>
+     <y>310</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Jack russell terrier</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_husky">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>310</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Husky siberiano</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_dogue">
+   <property name="geometry">
+    <rect>
+     <x>146</x>
+     <y>310</y>
+     <width>129</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dogue alemão</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_fila">
+   <property name="geometry">
+    <rect>
+     <x>281</x>
+     <y>310</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Fila brasileira</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_dogo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>130</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Dogo argentino</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dogo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>131</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="doguealemao">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>230</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="fila">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>230</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="husky">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>230</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="jack">
+   <property name="geometry">
+    <rect>
+     <x>557</x>
+     <y>230</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labrador">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>230</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lhasa">
+   <property name="geometry">
+    <rect>
+     <x>827</x>
+     <y>230</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lulu">
+   <property name="geometry">
+    <rect>
+     <x>957</x>
+     <y>230</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="golden">
+   <property name="geometry">
+    <rect>
+     <x>1097</x>
+     <y>230</y>
+     <width>131</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="maltes">
+   <property name="geometry">
+    <rect>
+     <x>1227</x>
+     <y>230</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mastiff">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>340</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="mastim">
+   <property name="geometry">
+    <rect>
+     <x>147</x>
+     <y>340</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pastoralemao">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>335</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pastoraustraliano">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>345</y>
+     <width>131</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pastorshetland">
+   <property name="geometry">
+    <rect>
+     <x>557</x>
+     <y>340</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pastormaremano">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>340</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pequines">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>340</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pincher">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>340</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pit">
+   <property name="geometry">
+    <rect>
+     <x>1100</x>
+     <y>335</y>
+     <width>121</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="poodle">
+   <property name="geometry">
+    <rect>
+     <x>1230</x>
+     <y>335</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pug">
+   <property name="geometry">
+    <rect>
+     <x>7</x>
+     <y>445</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="rottweiler">
+   <property name="geometry">
+    <rect>
+     <x>137</x>
+     <y>445</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="samoeida">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>445</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="schnauzer">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>450</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="shar">
+   <property name="geometry">
+    <rect>
+     <x>547</x>
+     <y>445</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="shiba">
+   <property name="geometry">
+    <rect>
+     <x>687</x>
+     <y>445</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="shih">
+   <property name="geometry">
+    <rect>
+     <x>817</x>
+     <y>440</y>
+     <width>141</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="staffordshire">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>450</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="terra">
+   <property name="geometry">
+    <rect>
+     <x>1097</x>
+     <y>450</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="vira">
+   <property name="geometry">
+    <rect>
+     <x>1227</x>
+     <y>450</y>
+     <width>141</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="weimaraner">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>560</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="wippet">
+   <property name="geometry">
+    <rect>
+     <x>147</x>
+     <y>560</y>
+     <width>131</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="yorkshire">
+   <property name="geometry">
+    <rect>
+     <x>277</x>
+     <y>555</y>
+     <width>141</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>90</y>
+     <width>1351</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="btn_akita">
+      <property name="text">
+       <string>Akita</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_america">
+      <property name="text">
+       <string>American s. terrier</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_basset">
+      <property name="text">
+       <string>Basset hound</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_beagle">
+      <property name="text">
+       <string>Beagle</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_bichon">
+      <property name="text">
+       <string>bichon frisér</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_boiadeiro">
+      <property name="text">
+       <string>Boiadeiro australian</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_border">
+      <property name="text">
+       <string>Border collie</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_boston">
+      <property name="text">
+       <string>Boston terrier</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_boxer">
+      <property name="text">
+       <string>Boxer</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_bulldogue_frances">
+      <property name="text">
+       <string>Bulldogue frances</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>200</y>
+     <width>1351</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QPushButton" name="btn_bulldogue_ingles">
+      <property name="text">
+       <string>Bulldogue Inglês</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_bull">
+      <property name="text">
+       <string>Bull terrier</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_cane">
+      <property name="text">
+       <string>Cane corso</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_cavalier">
+      <property name="text">
+       <string>Cavalier king C. S.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_chiahuahua">
+      <property name="text">
+       <string>Chihuahua</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_chowchow">
+      <property name="text">
+       <string>Chow chow</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_cocker">
+      <property name="text">
+       <string>Cocker spaniel i.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_dachshund">
+      <property name="text">
+       <string>Dachshund</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_dalmata">
+      <property name="text">
+       <string>Dálmata</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_doberman">
+      <property name="text">
+       <string>Doberman</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>640</y>
+     <width>401</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QPushButton" name="btn_weimaraner">
+      <property name="text">
+       <string>Weimaraner</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_whippet">
+      <property name="text">
+       <string>Whippet</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_yorkshire">
+      <property name="text">
+       <string>Yorkshire terrier</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

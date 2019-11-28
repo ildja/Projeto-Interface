@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>janela_Cadastro</class>
+ <widget class="QDialog" name="janela_Cadastro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>318</width>
+    <height>277</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>10</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cadastro TOSA &amp; BANHO</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_inserir">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>240</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Mostrar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_limpar">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>240</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Limpar</string>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>74</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="cliente_2">
+    <property name="text">
+     <string>Cliente</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="raca_2">
+    <property name="text">
+     <string>Raça</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="idade">
+    <property name="text">
+     <string>Idade</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="responsavel">
+    <property name="text">
+     <string>Responsável</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="email">
+    <property name="text">
+     <string>E-mail</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fone">
+    <property name="text">
+     <string>Fone Cont.</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="splitter_2">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>50</y>
+     <width>191</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLineEdit" name="txt_cliente"/>
+   <widget class="QLineEdit" name="txt_raca"/>
+   <widget class="QLineEdit" name="txt_idade"/>
+   <widget class="QLineEdit" name="txt_responsavel"/>
+   <widget class="QLineEdit" name="txt_email"/>
+   <widget class="QLineEdit" name="txt_telefone"/>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

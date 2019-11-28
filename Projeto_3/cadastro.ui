@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Cadastro</class>
+ <widget class="QDialog" name="Cadastro">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="formulario_cadastro">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>10</y>
+     <width>221</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cadastro Adestramento de Cães</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_cadastrar">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>270</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cadastrar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>270</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Apagar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>270</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Selecionar</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>50</y>
+     <width>341</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="nome">
+      <property name="text">
+       <string>Nome Dog</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_nome">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>341</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="sexo">
+      <property name="text">
+       <string>Sexo Dog</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="current_sexo">
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Feminino</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Masculino</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>341</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Idade Dog</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBox">
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11 meses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1 ano</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>10 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>12 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>13 anos</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>acima de 13 anos</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>341</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QLabel" name="raca">
+      <property name="text">
+       <string>Raça</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="comboBox_2">
+      <item>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Akita</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>American staffordshire terrier</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Basset hound</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Beagle</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bichon frisé</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Boiadeiro australiano</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Border collie</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Boston terrier</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Boxer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Buldogue francês</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Buldogue inglês</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Bull terrier</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cane corso</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cavalier king charles spaniel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Chihuahua</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Chow chow</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cocker spaniel inglês</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dachshund</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dálmata</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Doberman</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dogo argentino</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dogue alemão</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fila brasileiro</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Golden retriever</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Husky siberiano</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Jack russell terrier</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Labrador retriever</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lhasa apso</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lulu da Pomerânia</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Maltês</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mastiff inglês</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Mastim tibetano</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pastor alemão</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pastor australiano</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pastor de Shetland</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pastor Maremano Abruzes</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pequinês</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pinscher miniatura</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pit bull</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Poodle</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pug</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rottweiler</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Samoieda</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Schnauzer</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shar-pei</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shiba</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Shih tzu</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Staffordshire bull terrier</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Terra nova</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vira-lata</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Weimaraner</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Whippet</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Yorkshire terrier</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>170</y>
+     <width>341</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QLabel" name="responsavel">
+      <property name="text">
+       <string>Responsável</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_responsavel"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>200</y>
+     <width>341</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QLabel" name="contato">
+      <property name="text">
+       <string>Fone</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_contato"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>341</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>E-mail</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="txt_email"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>921</width>
+    <height>743</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="Dados">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>1247</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Dados</string>
+     </attribute>
+     <widget class="QLabel" name="nome">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>70</y>
+        <width>111</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Nome:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="responsavel">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>130</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Responsável:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="adestrador">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>160</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Adestrador:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="nota1">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>190</y>
+        <width>41</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Nota:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_nome">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>70</y>
+        <width>181</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_responsavel">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>130</y>
+        <width>381</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_nota1">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>190</y>
+        <width>41</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="avaliador">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>190</y>
+        <width>101</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Avaliador 1:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_avaliador1">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>190</y>
+        <width>281</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="avaliador2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>220</y>
+        <width>101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Avaliador 2:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_avaliador2">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>220</y>
+        <width>281</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="nota2">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>220</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Nota:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_nota2">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>220</y>
+        <width>41</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txt_adestrador">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>160</y>
+        <width>381</width>
+        <height>24</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="senha_acesso_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>250</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Senha Ident.:</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>-10</x>
+        <y>0</y>
+        <width>891</width>
+        <height>661</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>350</y>
+         <width>191</width>
+         <height>231</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="title">
+        <string>Ordenação:</string>
+       </property>
+       <widget class="QRadioButton" name="sel_nome">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>50</y>
+          <width>100</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="sel_media">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>80</y>
+          <width>100</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Média</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="sel_raca">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>110</y>
+          <width>100</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Raça</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_ordenar">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>160</y>
+          <width>80</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ordenar</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>20</y>
+          <width>191</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(252, 233, 79);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <zorder>frame_5</zorder>
+       <zorder>sel_nome</zorder>
+       <zorder>sel_media</zorder>
+       <zorder>sel_raca</zorder>
+       <zorder>btn_ordenar</zorder>
+      </widget>
+      <widget class="QLabel" name="sexo">
+       <property name="geometry">
+        <rect>
+         <x>380</x>
+         <y>70</y>
+         <width>41</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Sexo:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="combo_sexo">
+       <property name="geometry">
+        <rect>
+         <x>430</x>
+         <y>70</y>
+         <width>141</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <item>
+        <property name="text">
+         <string>Selecione o sexo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Feminino</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Masculino</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="raca">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>100</y>
+         <width>101</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Raça:</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="combo_raca">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>100</y>
+         <width>211</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>Selecione a raça</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Akita</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>American staffordshire terrier</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Basset hound</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Beagle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bichon frisé</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Boiadeiro australiano</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Border collie</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Boston terrier</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Boxer</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Buldogue francês</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Buldogue inglês</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Bull terrier</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cane corso</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cavalier king charles spaniel</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Chihuahua</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Chow chow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cocker spaniel inglês</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dachshund</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dálmata</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Doberman</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dogo argentino</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dogue alemão</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Fila brasileiro</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Golden retriever</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Husky siberiano</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Jack russell terrier</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Labrador retriever</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lhasa apso</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lulu da Pomerânia</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Maltês</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mastiff inglês</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Mastim tibetano</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pastor alemão</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pastor australiano</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pastor de Shetland</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pastor Maremano Abruzes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pequinês</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pinscher miniatura</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pit bull</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Poodle</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pug</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Rottweiler</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Samoieda</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Schnauzer</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Shiba</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Shih tzu</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Staffordshire bull terrier</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Vira-lata</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Weimaraner</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Whippet</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Yorkshire terrier</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="idade">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>100</y>
+         <width>101</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Idade:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_idade">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>100</y>
+         <width>111</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_senha_acesso">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>250</y>
+         <width>171</width>
+         <height>24</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_inserirDados">
+       <property name="geometry">
+        <rect>
+         <x>370</x>
+         <y>250</y>
+         <width>101</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Inserir dados</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_limpardados">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>250</y>
+         <width>91</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Limpar dados</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="plano_fundo_geral">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>871</width>
+         <height>641</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(65, 181, 175);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>40</y>
+          <width>541</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(171, 232, 230);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>320</y>
+          <width>541</width>
+          <height>291</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(171, 232, 230);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="txt_provarealizada">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>10</y>
+           <width>141</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Prova Realizada</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="tabela_provarealizada">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>41</y>
+           <width>501</width>
+           <height>231</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>164</number>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Nome</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Média</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Raça</string>
+          </property>
+         </column>
+        </widget>
+       </widget>
+       <widget class="QFrame" name="frame_4">
+        <property name="geometry">
+         <rect>
+          <x>610</x>
+          <y>330</y>
+          <width>231</width>
+          <height>261</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(171, 232, 230);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="logo_imagem">
+        <property name="geometry">
+         <rect>
+          <x>630</x>
+          <y>10</y>
+          <width>211</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">image: url(:/Imagens/husky-siberiano-2-768x512.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>210</y>
+          <width>58</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <zorder>plano_fundo_geral</zorder>
+      <zorder>sexo</zorder>
+      <zorder>combo_sexo</zorder>
+      <zorder>raca</zorder>
+      <zorder>combo_raca</zorder>
+      <zorder>idade</zorder>
+      <zorder>txt_idade</zorder>
+      <zorder>txt_senha_acesso</zorder>
+      <zorder>btn_inserirDados</zorder>
+      <zorder>btn_limpardados</zorder>
+      <zorder>groupBox</zorder>
+     </widget>
+     <zorder>frame</zorder>
+     <zorder>nome</zorder>
+     <zorder>responsavel</zorder>
+     <zorder>adestrador</zorder>
+     <zorder>nota1</zorder>
+     <zorder>txt_nome</zorder>
+     <zorder>txt_responsavel</zorder>
+     <zorder>txt_nota1</zorder>
+     <zorder>avaliador</zorder>
+     <zorder>txt_avaliador1</zorder>
+     <zorder>avaliador2</zorder>
+     <zorder>txt_avaliador2</zorder>
+     <zorder>nota2</zorder>
+     <zorder>txt_nota2</zorder>
+     <zorder>txt_adestrador</zorder>
+     <zorder>senha_acesso_2</zorder>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Resultados Campẽos</string>
+     </attribute>
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>871</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(65, 181, 175);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="frame_7">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>20</y>
+         <width>361</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(171, 232, 230);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="categoriaAptidao">
+        <property name="geometry">
+         <rect>
+          <x>350</x>
+          <y>190</y>
+          <width>311</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Categoria Aptidão para Cão de Salvamento</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>321</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(237, 212, 0);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="txt_vencedorPrimeiro">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>0</y>
+           <width>261</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 16pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 10pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Raça</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="txt_racavencedora">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>40</y>
+           <width>261</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 10pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Nome</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="Primeirolugar">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>10</y>
+          <width>121</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Primeiro lugar</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="txt_vencedorCaoLocaliza">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>350</y>
+         <width>58</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frame_15">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>320</y>
+         <width>361</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(171, 232, 230);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_19">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>321</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(237, 212, 0);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="txt_vencedorTerceiro">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>0</y>
+           <width>261</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 16pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 10pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Nome</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>58</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 10pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Raça</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="txt_racaTerceiro">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>40</y>
+           <width>261</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="TerceiroLugar">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>10</y>
+          <width>121</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Terceiro Lugar</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_13">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>170</y>
+         <width>361</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(171, 232, 230);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QLabel" name="Segundolugar">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>10</y>
+          <width>131</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Segundo Lugar</string>
+        </property>
+       </widget>
+       <widget class="QFrame" name="frame_17">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>40</y>
+          <width>321</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(237, 212, 0);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="txt_vencedorSegundo">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>0</y>
+           <width>261</width>
+           <height>41</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 16pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_9">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 10pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Nome</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>50</y>
+           <width>58</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 10pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>Raça</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="txt_racaSegunda">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>45</y>
+           <width>261</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame_12">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>470</y>
+         <width>361</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(237, 212, 0);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QFrame" name="frame_21">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>321</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(171, 232, 230);</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QLabel" name="txt_racadestaque">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>301</width>
+           <height>61</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 75 16pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QLabel" name="racadestaque">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>10</y>
+          <width>251</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 75 12pt &quot;URW Bookman L&quot;;
+color: rgb(0, 0, 0);</string>
+        </property>
+        <property name="text">
+         <string>Raça Destaque em Participação</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_atualizar">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>30</y>
+         <width>131</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(204, 0, 0);
+alternate-background-color: rgb(237, 212, 0);
+font: 14pt &quot;Ubuntu&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Atualizar</string>
+       </property>
+      </widget>
+      <zorder>frame_13</zorder>
+      <zorder>frame_7</zorder>
+      <zorder>txt_vencedorCaoLocaliza</zorder>
+      <zorder>frame_15</zorder>
+      <zorder>frame_12</zorder>
+      <zorder>btn_atualizar</zorder>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>921</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuarquivo">
+    <property name="title">
+     <string>arquivo</string>
+    </property>
+    <addaction name="actionSalvar"/>
+    <addaction name="actionCarregar"/>
+    <addaction name="actionSair"/>
+    <addaction name="actionLimpar_Tabela"/>
+   </widget>
+   <addaction name="menuarquivo"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalvar">
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </action>
+  <action name="actionCarregar">
+   <property name="text">
+    <string>Carregar</string>
+   </property>
+  </action>
+  <action name="actionSair">
+   <property name="text">
+    <string>Sair</string>
+   </property>
+  </action>
+  <action name="actionLimpar_Tabela">
+   <property name="text">
+    <string>Limpar Tabela</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
