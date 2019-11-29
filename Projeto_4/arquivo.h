@@ -15,7 +15,7 @@ public:
     Arquivo();
     Classificador a, n;
     static bool salvarLista(QString &arquivo, Classificador a);
-    static bool carregarLista(QString &arquivo);
+    static bool carregarLista(QString &arquivo, Classificador &b);
 
 };
 

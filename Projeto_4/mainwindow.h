@@ -6,11 +6,12 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QTableWidgetItem>
+#include <QPixmap>
+#include <QApplication>
 #include <QDesktopServices>
-#include <QUrl>
+#include <QTextStream>
 #include <QInputDialog>
 #include <QWidget>
-
 #include "arquivo.h"
 #include "caes.h"
 #include "classificador.h"
@@ -29,26 +30,17 @@ public:
     ~MainWindow();
 
     Classificador a;
-    //pronto
 
 private slots:
     void on_btn_inserirDados_clicked();
-
     void on_btn_limpardados_clicked();
-
     void on_btn_ordenar_clicked();
-
     void on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column);
-
     void on_btn_atualizar_clicked();
-
     void on_actionSalvar_triggered();
-
     void on_actionCarregar_triggered();
-
     void on_actionSair_triggered();
-
-     void on_actionLimpar_Tabela_triggered();
+    void on_actionLimpar_Tabela_triggered();
 
 private:
     Ui::MainWindow *ui;

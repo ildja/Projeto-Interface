@@ -9,7 +9,7 @@ Arquivo::Arquivo()
 
 bool Arquivo::salvarLista(QString &arquivo, Classificador a)
 {
-    QFile arq(arquivo);
+    QFile arq(arquivo + ".csv");
 
         arq.open(QIODevice::WriteOnly);
         if(arq.isOpen() == 1){
@@ -24,9 +24,9 @@ bool Arquivo::salvarLista(QString &arquivo, Classificador a)
         }
 }
 
-bool Arquivo::carregarLista(QString &arquivo)
+bool Arquivo::carregarLista(QString &arquivo, Classificador &b)
 {
-    QFile arq(arquivo);
+    QFile arq(arquivo + ".csv");
 
        if(arq.open(QIODevice::ReadOnly)){
            return 1;
@@ -38,7 +38,6 @@ bool Arquivo::carregarLista(QString &arquivo)
 
        while(!arq.atEnd()){
            Caes temp;
-           Classificador b;
            linha = arq.readLine();
            line = linha.split(",");
            temp.setNome(line[0]);
@@ -56,3 +55,4 @@ bool Arquivo::carregarLista(QString &arquivo)
        arq.close();
        return 0;
 }
+
