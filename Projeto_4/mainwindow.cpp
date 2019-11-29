@@ -144,17 +144,17 @@ void MainWindow::Salvar()
 {
     QString arqname = QFileDialog::getSaveFileName(this, "Salvar Arquivo","","*.csv");
 
-    if(Arquivo::salvarLista(arqname,a))
+    if(Arquivo::salvarLista(arqname, a))
         QMessageBox::information(this,"Salvar Provas Realizadas", "Dados salvos com Sucesso!");
     else
-        QMessageBox::information(this,"Salvar Provas Realizadas", "Não foi possível salvar os dados!");
+        QMessageBox::information(this,"Erro", "Não foi possível salvar os dados!");
 }
 
 void MainWindow::Carregar()
 {
-    QString nomeArquivo = QFileDialog::getOpenFileName(this, "Carregar Arquivos","","*.csv");
+    QString arqname = QFileDialog::getOpenFileName(this, "Carregar Arquivos","","*.csv");
 
-    if((Arquivo::carregarLista(nomeArquivo, a))==1){
+    if(Arquivo::carregarLista(arqname, a)){
         QMessageBox::critical(this,"Arquivo","O arquivo já foi lido, favor cheque a tabela!");
     }else{
         ui->tabela_provarealizada->clearContents();
@@ -166,6 +166,7 @@ void MainWindow::Carregar()
             }
        }
 }
+
 
 /*void MainWindow::Carregar()
     {

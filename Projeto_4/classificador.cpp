@@ -21,11 +21,11 @@ void Classificador::btn_inserirDados(const Caes c)
     lista.push_back(c);
 }
 
-bool Classificador::NomeExiste(Caes a)
+bool Classificador::NomeExiste(Caes c)
 {
     if(lista.size() >= 1){
         for(int i = 0; i < lista.size(); i++){
-            if(a.getNome() == lista[i].getNome()){
+            if(c.getNome() == lista[i].getNome()){
                 return 1;
             }
         }

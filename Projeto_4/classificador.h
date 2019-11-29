@@ -29,7 +29,7 @@ public:
     QString Racasegundolugar();
     QString terceirolugar();
     QString Racaterceirolugar();
-    bool NomeExiste(Caes a);
+    bool NomeExiste(Caes c);
     bool salvarArquivo(QString arquivo);
     bool carregarArquivo(QString arquivo);
     void setNota1(int index, float value);
