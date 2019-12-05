@@ -13,7 +13,7 @@ class Arquivo : public Classificador
 {
 public:
     Arquivo();
-    Classificador a, n;
+    Classificador a, b;
     static bool salvarLista(QString &arquivo, Classificador a);
     static bool carregarLista(QString &arquivo, Classificador &b);
 

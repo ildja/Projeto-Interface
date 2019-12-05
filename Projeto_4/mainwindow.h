@@ -30,12 +30,13 @@ public:
     ~MainWindow();
 
     Classificador a;
+    //Arquivo ar;
 
 private slots:
     void on_btn_inserirDados_clicked();
     void on_btn_limpardados_clicked();
     void on_btn_ordenar_clicked();
-    void on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column);
+    void on_tabela_provarealizada_cellDoubleClicked(int row, int column);
     void on_btn_atualizar_clicked();
     void on_actionSalvar_triggered();
     void on_actionCarregar_triggered();

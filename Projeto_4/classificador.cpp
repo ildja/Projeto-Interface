@@ -25,12 +25,12 @@ bool Classificador::NomeExiste(Caes c)
 {
     if(lista.size() >= 1){
         for(int i = 0; i < lista.size(); i++){
-            if(c.getNome() == lista[i].getNome()){
+            if(c.getNome() == lista[i].getNome() && c.getResponsavel() == lista[i].getResponsavel()){
                 return 1;
             }
         }
+    }else{return 0;
     }
-    return 0;
 }
 
 Classificador::Classificador()
@@ -91,52 +91,8 @@ QString Classificador::Racaterceirolugar()
     return lista[2].getRaca();
 }
 
-//nicolas
-bool Classificador::salvarArquivo(QString file)
-{
-    QFile arquivo(file);
-    arquivo.open(QIODevice::WriteOnly);
-    if(arquivo.isOpen() == 1){
-        for(auto a:lista){
-            QString linha = a.getNome() + "," + QString::number(a.CalcularMedia()) + "," + a.getRaca() + "," + a.getIdade() + "," + a.getSexo() +","+ a.getResponsavel() + "," + a.getAdestrador() +"\n";
-            arquivo.write(linha.toLocal8Bit());
-        }
-        arquivo.close();
-        return 1;
-    }else{
-        return 0;
-    }
 
-}
-//nicolas
-bool Classificador::carregarArquivo(QString file)
-{
 
-    QFile arquivo(file);
-    if(arquivo.isOpen() == 1)return 1;
-    else{
-        arquivo.open(QIODevice::ReadOnly);
-        QString linha;
-        QStringList dados;
-        while(!arquivo.atEnd()){
-            Caes temp;
-            linha = arquivo.readLine();
-            dados = linha.split(",");
-            temp.setNome(dados[0]);
-           // temp.CalcularMedia(dados[1].toFloat());
-            temp.setRaca(dados[2]);
-            temp.setIdade(dados[3]);
-            temp.setSexo(dados[4]);
-            temp.setResponsavel(dados[5]);
-            temp.setAdestrador(dados[6]);
-            if(NomeExiste(temp) == 0)
-                btn_inserirDados(temp);
-        }
-        arquivo.close();
-        return 0;
-    }
-
-}
 //nicolas
 bool Classificador::apagarNome(QString txt)
 {

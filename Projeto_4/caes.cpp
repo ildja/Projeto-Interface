@@ -3,7 +3,10 @@
 
 void Caes::setNome(const QString &value)
 {
-    nome = value;
+    if(value.size()>2){
+        nome = value;
+    }else{nome = "erro";
+      }
 }
 
 QString Caes::getNome() const
@@ -83,7 +86,11 @@ QString Caes::getAvaliador2() const
 
 void Caes::setNota1(float value)
 {
-    nota1 = value;
+    if(value >= 0 and value <= 100){
+        nota1 = value;
+    }else{
+        nota1 = 0;
+    }
 }
 
 float Caes::getNota1() const
@@ -93,7 +100,11 @@ float Caes::getNota1() const
 
 void Caes::setNota2(float value)
 {
-    nota2 = value;
+    if(value >= 0 and value <= 100){
+        nota2 = value;
+    }else{
+        nota2 = 0;
+    }
 }
 
 float Caes::getNota2() const
@@ -104,6 +115,11 @@ float Caes::getNota2() const
 float Caes::CalcularMedia() const
 {
     return ((getNota1()*5.0)+(getNota2()*5.0))/10.0;
+}
+
+float Caes::setMedia() const
+{
+    return CalcularMedia();
 }
 
 Caes::Caes(QString name, QString sex, QString raca, QString idad, QString resp, QString adest, QString avali1, QString avali2, float nota1, float nota2)

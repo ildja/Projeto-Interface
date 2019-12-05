@@ -144,7 +144,7 @@ void MainWindow::Salvar()
 {
     QString arqname = QFileDialog::getSaveFileName(this, "Salvar Arquivo","","*.csv");
 
-    if(Arquivo::salvarLista(arqname, a))
+    if(Arquivo::salvarLista(arqname, a) == 1)
         QMessageBox::information(this,"Salvar Provas Realizadas", "Dados salvos com Sucesso!");
     else
         QMessageBox::information(this,"Erro", "Não foi possível salvar os dados!");
@@ -154,7 +154,7 @@ void MainWindow::Carregar()
 {
     QString arqname = QFileDialog::getOpenFileName(this, "Carregar Arquivos","","*.csv");
 
-    if(Arquivo::carregarLista(arqname, a)){
+    if(Arquivo::carregarLista(arqname, a) == 1){
         QMessageBox::critical(this,"Arquivo","O arquivo já foi lido, favor cheque a tabela!");
     }else{
         ui->tabela_provarealizada->clearContents();
@@ -166,7 +166,6 @@ void MainWindow::Carregar()
             }
        }
 }
-
 
 /*void MainWindow::Carregar()
     {
@@ -198,7 +197,7 @@ void MainWindow::on_actionSair_triggered()
     QApplication::quit();
 }
 
-void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column)
+void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
 {
     if(column == 0){
         QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você deseja editar este item?");
@@ -208,7 +207,7 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
         if(ok and !txt.isEmpty()){
         Caes temp;
             temp.setNome(txt);
-          //  temp.setMedia(a[row].CalcularMedia());
+            //temp.setMedia(a[row].CalcularMedia());
             temp.setRaca(a[row].getRaca());
             temp.setIdade(a[row].getIdade());
             temp.setSexo(a[row].getSexo());
@@ -219,8 +218,31 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
             ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getNome()));
         }else{
            QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
+           }
         }
     }
+
+    if(column == 1){
+            QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você deseja editar este item?");
+           if(resp == QMessageBox::Yes){
+               bool ok;
+               QString txt = QInputDialog::getText(this, "Alterar Nota Avaliador 1", "Nota Avaliador 1", QLineEdit::Normal,"",&ok);
+               if(ok and !txt.isEmpty()){
+                   a.setNota1(row,txt.toFloat());
+               }
+
+               QString txt1 = QInputDialog::getText(this, "Alterar Nota Avaliador 2", "Nota Avaliador 2", QLineEdit::Normal,"",&ok);
+               if(ok and !txt1.isEmpty()){
+                   a.setNota2(row,txt1.toFloat());
+               }
+
+                   a.find(row).CalcularMedia();
+                   a.eraseNome(txt);
+               inserirDadosNaTabela(a[row],row);
+           }else{
+              QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
+               }
+           }
 
     if(column == 2){
         QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você deseja editar este item?");
@@ -230,9 +252,9 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
         if(ok and !txt.isEmpty()){
 
             Caes temp;
-                temp.setNome(txt);
+                temp.setNome(a[row].getNome());
               //  temp.setMedia(a[row].CalcularMedia());
-                temp.setRaca(a[row].getRaca());
+                temp.setRaca(txt);
                 temp.setIdade(a[row].getIdade());
                 temp.setSexo(a[row].getSexo());
                 temp.setResponsavel(a[row].getResponsavel());
@@ -253,10 +275,10 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
         if(ok and !txt.isEmpty()){
 
             Caes temp;
-                temp.setNome(txt);
+                temp.setNome(a[row].getNome());
               //  temp.setMedia(a[row].CalcularMedia());
                 temp.setRaca(a[row].getRaca());
-                temp.setIdade(a[row].getIdade());
+                temp.setIdade(txt);
                 temp.setSexo(a[row].getSexo());
                 temp.setResponsavel(a[row].getResponsavel());
                 temp.setAdestrador(a[row].getAdestrador());
@@ -276,11 +298,11 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
         if(ok and !txt.isEmpty()){
 
             Caes temp;
-                temp.setNome(txt);
+                temp.setNome(a[row].getNome());
               //  temp.setMedia(a[row].CalcularMedia());
                 temp.setRaca(a[row].getRaca());
                 temp.setIdade(a[row].getIdade());
-                temp.setSexo(a[row].getSexo());
+                temp.setSexo(txt);
                 temp.setResponsavel(a[row].getResponsavel());
                 temp.setAdestrador(a[row].getAdestrador());
                 a.eraseNome(txt);
@@ -299,12 +321,12 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
         if(ok and !txt.isEmpty()){
 
             Caes temp;
-                temp.setNome(txt);
+                temp.setNome(a[row].getNome());
               //  temp.setMedia(a[row].CalcularMedia());
                 temp.setRaca(a[row].getRaca());
                 temp.setIdade(a[row].getIdade());
                 temp.setSexo(a[row].getSexo());
-                temp.setResponsavel(a[row].getResponsavel());
+                temp.setResponsavel(txt);
                 temp.setAdestrador(a[row].getAdestrador());
                 a.eraseNome(txt);
                 a.btn_inserirDados(temp);
@@ -321,13 +343,13 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
         QString txt = QInputDialog::getText(this, "Alterar Valor", "Digite o novo valor", QLineEdit::Normal,"",&ok);
         if(ok and !txt.isEmpty()){
             Caes temp;
-                temp.setNome(txt);
+                temp.setNome(a[row].getNome());
               //  temp.setMedia(a[row].CalcularMedia());
                 temp.setRaca(a[row].getRaca());
                 temp.setIdade(a[row].getIdade());
                 temp.setSexo(a[row].getSexo());
                 temp.setResponsavel(a[row].getResponsavel());
-                temp.setAdestrador(a[row].getAdestrador());
+                temp.setAdestrador(txt);
                 a.eraseNome(txt);
                 a.btn_inserirDados(temp);
            ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getAdestrador()));
@@ -338,57 +360,6 @@ void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column
     }
 }
 
-/*void MainWindow::on_tabelaProvasRealizadas_cellDoubleClicked(int row, int column)
-{
-    if(column == 0){
-        QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você desejar editar o nome do Cachorro selecionado?");
-
-        if(resp == QMessageBox::Yes){
-            bool ok;
-            QString txt = QInputDialog::getText(this, "Alterar Nome do Cachorro", "Nome do Cachorro", QLineEdit::Normal,"",&ok);
-            if(ok and !txt.isEmpty()){
-                a.setNome(txt);
-            }
-            inserirDadosNaTabela(a[row],row);
-            QMessageBox::information(this,"Editar","Dados alterados!");
-        }
-
-    }if(column == 1){
-       QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você desejar editar as notas da prova selecionada?");
-
-       if(resp == QMessageBox::Yes){
-           bool ok;
-           QString txt = QInputDialog::getText(this, "Alterar Nota do Avaliador 1", "Nota do Avaliador 1", QLineEdit::Normal,"",&ok);
-           if(ok and !txt.isEmpty()){
-               a.setNota1(row,txt.toFloat());
-               QMessageBox::information(this,"Editar","Dados alterados!");
-           }
-
-           QString txt1 = QInputDialog::getText(this, "Alterar Nota do Avaliador 2", "Nota do Avaliador 2", QLineEdit::Normal,"",&ok);
-           if(ok and !txt1.isEmpty()){
-               a.setNota2(row,txt1.toFloat());
-               QMessageBox::information(this,"Editar","Dados alterados!");
-           }
-
-               a.find(row).CalcularMedia();
-
-           inserirDadosNaTabela(a[row],row);
-           }
-
-    }if(column == 2){
-        QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você desejar editar a raça do Cachorro selecionado?");
-
-        if(resp == QMessageBox::Yes){
-            bool ok;
-            QString txt = QInputDialog::getText(this, "Alterar Raça do Cachorro", "Raça do Cachorro", QLineEdit::Normal,"",&ok);
-            if(ok and !txt.isEmpty()){
-                a.setNome(row,txt);
-            }
-            inserirDadosNaTabela(a[row],row);
-            QMessageBox::information(this,"Editar","Dados alterados!");
-        }
-     }*/
-}
 
 void MainWindow::on_btn_atualizar_clicked()
 {
@@ -413,10 +384,5 @@ void MainWindow::on_btn_atualizar_clicked()
          }
         }
 }
-
-
-
-
-
 
 

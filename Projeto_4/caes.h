@@ -52,6 +52,7 @@ public:
     void setNota2(float value);
 
     float CalcularMedia()const;
+   float setMedia() const;
 
 
 signals:

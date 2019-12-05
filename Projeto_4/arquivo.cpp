@@ -24,7 +24,9 @@ bool Arquivo::salvarLista(QString &arquivo, Classificador a)
         }
 }
 
-bool Arquivo::carregarLista(QString &arquivo, Classificador &b)
+
+
+/*bool Arquivo::carregarLista(QString &arquivo, Classificador &b)
 {
     QFile arq(arquivo + ".csv");
 
@@ -56,3 +58,113 @@ bool Arquivo::carregarLista(QString &arquivo, Classificador &b)
        return 0;
 }
 
+bool Arquivo::carregarLista(QString &arquivo, Classificador &b)
+{
+    QFile arq(arquivo);
+
+       if(!arq.open(QIODevice::ReadOnly)){
+           return 1;
+       }else{
+
+       QTextStream opa(&arq);
+
+       QString line;
+
+       while(!opa.atEnd()){
+           line = opa.readLine();
+
+           QStringList separados = line.split(",");
+
+           while(!opa.atEnd()){
+                      line = opa.readLine();
+
+                      QStringList separados = line.split(",");
+
+                      while (separados.size() < 11){
+                          Caes c(separados[0],separados[1],separados[2],separados[3],separados[4],separados[5],separados[6],separados[7],separados[8].toFloat(),separados[9].toFloat());
+                          b.btn_inserirDados(c);
+                      }
+
+                  }
+                  arq.close();
+                  return 0;
+           }
+}*/
+
+bool Arquivo::carregarLista(QString &arquivo, Classificador &b)
+{
+
+    QFile arq(arquivo);
+//    if(arq.open(QIODevice::ReadOnly) == 1){
+//            return 1;
+//    }else{
+        arq.open(QIODevice::ReadOnly);
+        QString linha;
+        QStringList dados;
+        while(!arq.atEnd()){
+            Caes temp;
+            linha = arq.readLine();
+            dados = linha.split(",");
+            temp.setNome(dados[0]);
+            //temp.CalcularMedia(dados[1].toFloat());
+            temp.setRaca(dados[2]);
+            temp.setIdade(dados[3]);
+            temp.setSexo(dados[4]);
+            temp.setResponsavel(dados[5]);
+            temp.setAdestrador(dados[6]);
+            temp.setNota1(dados[8].toFloat());
+            temp.setNota2(dados[9].toFloat());
+            if(b.NomeExiste(temp) == 0)
+            b.btn_inserirDados(temp);
+        }
+        arq.close();
+        return 0;
+  //  }
+
+}
+
+/*bool Arquivo::carregarLista(QString file)
+{
+
+    QFile arquivo(file);
+    if(arquivo.isOpen() == 1)return 1;
+    else{
+        arquivo.open(QIODevice::ReadOnly);
+        QString linha;
+        QStringList dados;
+        while(!arquivo.atEnd()){
+            Caes temp;
+            linha = arquivo.readLine();
+            dados = linha.split(",");
+            temp.setNome(dados[0]);
+            //temp.CalcularMedia(dados[1].toFloat());
+            temp.setRaca(dados[2]);
+            temp.setIdade(dados[3]);
+            temp.setSexo(dados[4]);
+            temp.setResponsavel(dados[5]);
+            temp.setAdestrador(dados[6]);
+            if(NomeExiste(temp) == 0)
+                btn_inserirDados(temp);
+        }
+        arquivo.close();
+        return 0;
+    }
+
+}
+
+bool Classificador::salvarArquivo(QString file)
+{
+    QFile arquivo(file);
+    arquivo.open(QIODevice::WriteOnly);
+    if(arquivo.isOpen() == 1){
+        for(auto a:lista){
+            QString linha = a.getNome() + "," + QString::number(a.CalcularMedia()) + "," + a.getRaca() + "," + a.getIdade() + "," + a.getSexo() +","+ a.getResponsavel() + "," + a.getAdestrador() +"\n";
+            arquivo.write(linha.toLocal8Bit());
+        }
+        arquivo.close();
+        return 1;
+    }else{
+        return 0;
+    }
+
+}*/

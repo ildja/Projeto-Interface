@@ -22,6 +22,7 @@ public:
     void ordenarListaMedia ();
     void ordenarListaNome ();
     void ordenarListaRaca();
+    void ordenarListaIdade();
     QVector <Caes> returnVector();
     QString primeirolugar();
     QString Racaprimeirolugar();
@@ -30,8 +31,6 @@ public:
     QString terceirolugar();
     QString Racaterceirolugar();
     bool NomeExiste(Caes c);
-    bool salvarArquivo(QString arquivo);
-    bool carregarArquivo(QString arquivo);
     void setNota1(int index, float value);
     void setNota2(int index, float value);
     void setNome(int index, QString value);
