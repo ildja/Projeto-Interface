@@ -124,19 +124,6 @@ color: rgb(0, 0, 0);</string>
        </rect>
       </property>
      </widget>
-     <widget class="QLineEdit" name="txt_nota1">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>190</y>
-        <width>41</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLabel" name="avaliador">
       <property name="geometry">
        <rect>
@@ -206,16 +193,6 @@ color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>Nota:</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="txt_nota2">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>220</y>
-        <width>41</width>
-        <height>24</height>
-       </rect>
       </property>
      </widget>
      <widget class="QLineEdit" name="txt_adestrador">
@@ -711,25 +688,6 @@ color: rgb(0, 0, 0);</string>
         <string>Idade:</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="txt_idade">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="geometry">
-        <rect>
-         <x>460</x>
-         <y>100</y>
-         <width>111</width>
-         <height>24</height>
-        </rect>
-       </property>
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="txt_senha_acesso">
        <property name="geometry">
         <rect>
@@ -802,6 +760,26 @@ color: rgb(0, 0, 0);</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
+        <widget class="QSpinBox" name="txt_nota1">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>140</y>
+           <width>42</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="txt_nota2">
+         <property name="geometry">
+          <rect>
+           <x>480</x>
+           <y>170</y>
+           <width>42</width>
+           <height>25</height>
+          </rect>
+         </property>
+        </widget>
        </widget>
        <widget class="QFrame" name="frame_3">
         <property name="geometry">
@@ -889,6 +867,19 @@ color: rgb(0, 0, 0);</string>
           </property>
          </column>
         </widget>
+        <widget class="QPushButton" name="ExcluirDados">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>10</y>
+           <width>111</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Excluir Dados</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QFrame" name="frame_4">
         <property name="geometry">
@@ -929,17 +920,27 @@ color: rgb(0, 0, 0);</string>
         </property>
        </widget>
       </widget>
+      <widget class="QSpinBox" name="txt_idade">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>100</y>
+         <width>101</width>
+         <height>25</height>
+        </rect>
+       </property>
+      </widget>
       <zorder>plano_fundo_geral</zorder>
       <zorder>sexo</zorder>
       <zorder>combo_sexo</zorder>
       <zorder>raca</zorder>
       <zorder>combo_raca</zorder>
       <zorder>idade</zorder>
-      <zorder>txt_idade</zorder>
       <zorder>txt_senha_acesso</zorder>
       <zorder>btn_inserirDados</zorder>
       <zorder>btn_limpardados</zorder>
       <zorder>groupBox</zorder>
+      <zorder>txt_idade</zorder>
      </widget>
      <zorder>frame</zorder>
      <zorder>nome</zorder>
@@ -948,13 +949,11 @@ color: rgb(0, 0, 0);</string>
      <zorder>nota1</zorder>
      <zorder>txt_nome</zorder>
      <zorder>txt_responsavel</zorder>
-     <zorder>txt_nota1</zorder>
      <zorder>avaliador</zorder>
      <zorder>txt_avaliador1</zorder>
      <zorder>avaliador2</zorder>
      <zorder>txt_avaliador2</zorder>
      <zorder>nota2</zorder>
-     <zorder>txt_nota2</zorder>
      <zorder>txt_adestrador</zorder>
      <zorder>senha_acesso_2</zorder>
     </widget>
@@ -1308,10 +1307,38 @@ color: rgb(255, 255, 255);</string>
         <string>Atualizar</string>
        </property>
       </widget>
+      <widget class="QLabel" name="generofeminino">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>510</y>
+         <width>201</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="generomasculino">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>510</y>
+         <width>211</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
       <zorder>frame_13</zorder>
       <zorder>frame_7</zorder>
       <zorder>frame_15</zorder>
       <zorder>btn_atualizar</zorder>
+      <zorder>generofeminino</zorder>
+      <zorder>generomasculino</zorder>
      </widget>
     </widget>
    </widget>

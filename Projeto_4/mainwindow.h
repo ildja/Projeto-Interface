@@ -12,6 +12,7 @@
 #include <QTextStream>
 #include <QInputDialog>
 #include <QWidget>
+#include <tuple>
 #include "arquivo.h"
 #include "caes.h"
 #include "classificador.h"
@@ -43,9 +44,12 @@ private slots:
     void on_actionSair_triggered();
     void on_actionLimpar_Tabela_triggered();
 
+    void on_ExcluirDados_clicked();
+
 private:
     Ui::MainWindow *ui;
-    void inserirDadosNaTabela(Caes c, int row);
+    void inserirDadosNaTabela();
+    void inserirNaTabela(Caes k, int linhas);
     void Salvar();
     void Carregar();
 };

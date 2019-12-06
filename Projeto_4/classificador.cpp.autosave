@@ -2,17 +2,17 @@
 
 bool comp(Caes a, Caes b)
 {
-    return a.getMedia() < b.getMedia();
+    return a.getMedia() > b.getMedia();
 }
 
 bool cimp(Caes a, Caes b)
 {
-    return a.getNome() > b.getNome();
+    return a.getNome() < b.getNome();
 }
 
 bool camp(Caes a, Caes b)
 {
-    return a.getRaca() > b.getRaca();
+    return a.getRaca() < b.getRaca();
 }
 
 void Classificador::btn_inserirDados(const Caes c)

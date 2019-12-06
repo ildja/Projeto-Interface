@@ -1,12 +1,11 @@
 #include "caes.h"
 
-
-void Caes::setNome(const QString &value)
+bool Caes::setNome(const QString &value)
 {
     if(value.size()>2){
         nome = value;
-    }else{nome = "erro";
-      }
+        return false;
+    }else return true;
 }
 
 QString Caes::getNome() const
@@ -24,12 +23,12 @@ QString Caes::getSexo() const
     return sexo;
 }
 
-void Caes::setIdade(const QString &value)
+void Caes::setIdade(const int &value)
 {
     idade = value;
 }
 
-QString Caes::getIdade() const
+int Caes::getIdade() const
 {
     return idade;
 }
@@ -44,9 +43,12 @@ QString Caes::getRaca() const
     return raca;
 }
 
-void Caes::setResponsavel(const QString &value)
+bool Caes::setResponsavel(const QString &value)
 {
-    responsavel = value;
+    if(value.size()>2){
+       responsavel = value;
+        return false;
+    }else return true;
 }
 
 QString Caes::getResponsavel() const
@@ -54,9 +56,12 @@ QString Caes::getResponsavel() const
     return responsavel;
 }
 
-void Caes::setAdestrador(const QString &value)
+bool Caes::setAdestrador(const QString &value)
 {
-    adestrador = value;
+    if(value.size()>2){
+       adestrador = value;
+        return false;
+    }else return true;
 }
 
 QString Caes::getAdestrador() const
@@ -64,9 +69,12 @@ QString Caes::getAdestrador() const
     return adestrador;
 }
 
-void Caes::setAvaliador1(const QString &value)
+bool Caes::setAvaliador1(const QString &value)
 {
-    avaliador1 = value;
+    if(value.size()>2){
+        avaliador1 = value;
+        return false;
+    }else return true;
 }
 
 QString Caes::getAvaliador1() const
@@ -74,9 +82,12 @@ QString Caes::getAvaliador1() const
     return avaliador1;
 }
 
-void Caes::setAvaliador2(const QString &value)
+bool Caes::setAvaliador2(const QString &value)
 {
-    avaliador2 = value;
+    if(value.size()>2){
+       avaliador2 = value;
+        return false;
+    }else return true;
 }
 
 QString Caes::getAvaliador2() const
@@ -84,60 +95,42 @@ QString Caes::getAvaliador2() const
     return avaliador2;
 }
 
-void Caes::setNota1(float value)
+void Caes::setNota1(int value)
 {
-    if(value >= 0 and value <= 100){
-        nota1 = value;
-    }else{
-        nota1 = 0;
-    }
+    nota1 = value;
+    CalcularMedia();
 }
 
-float Caes::getNota1() const
+int Caes::getNota1() const
 {
     return nota1;
 }
 
-void Caes::setNota2(float value)
+void Caes::setNota2(int value)
 {
-    if(value >= 0 and value <= 100){
-        nota2 = value;
-    }else{
-        nota2 = 0;
-    }
+    nota2 = value;
+    CalcularMedia();
 }
 
-float Caes::getNota2() const
+int Caes::getNota2() const
 {
     return nota2;
 }
 
-float Caes::CalcularMedia() const
-{
-    return ((getNota1()*5.0)+(getNota2()*5.0))/10.0;
+float Caes::CalcularMedia() {
+    media =  ((nota1*5.0)+(nota2*5.0))/10.0;
 }
 
-float Caes::setMedia() const
+double Caes::getMedia() const
 {
-    return CalcularMedia();
-}
-
-Caes::Caes(QString name, QString sex, QString raca, QString idad, QString resp, QString adest, QString avali1, QString avali2, float nota1, float nota2)
-{
-    setNome(name);
-    setSexo(sex);
-    setRaca(raca);
-    setIdade(idad);
-    setResponsavel(resp);
-    setAdestrador(adest);
-    setAvaliador1(avali1);
-    setAvaliador2(avali2);
-    setNota1(nota1);
-    setNota2(nota2);
+    return media;
 }
 
 Caes::Caes()
 {
+    nota1 = 0;
+    nota2 = 0;
+    media = 0;
 
 }
 

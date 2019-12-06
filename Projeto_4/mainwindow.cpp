@@ -7,6 +7,16 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->txt_nota1->setMaximum(100);
+    ui->txt_nota2->setMaximum(100);
+    ui->txt_idade->setMaximum(30);
+    ui->tabela_provarealizada->setColumnWidth(0,120);
+    ui->tabela_provarealizada->setColumnWidth(1,80);
+    ui->tabela_provarealizada->setColumnWidth(2,190);
+    ui->tabela_provarealizada->setColumnWidth(3,80);
+    ui->tabela_provarealizada->setColumnWidth(4,100);
+    ui->tabela_provarealizada->setColumnWidth(5,110);
+    ui->tabela_provarealizada->setColumnWidth(6,120);
 }
 
 MainWindow::~MainWindow()
@@ -16,73 +26,63 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_btn_inserirDados_clicked()
 {
-    int qrow = 0;
-    bool senha_acesso = true;
+    Caes c;
 
-    if(ui->txt_nome->text().size() != 0 and ui->combo_sexo->currentText() != "Selecione o sexo" and ui->combo_raca->currentText() != "Selecione a raça" and ui->txt_idade->text().size() != 0 and ui->txt_responsavel->text().size() != 0 and ui->txt_adestrador->text().size() != 0 and ui->txt_avaliador1->text().size() != 0 and ui->txt_avaliador2->text().size() != 0 and ui->txt_nota1->text().size() != 0 and ui->txt_nota2->text().size() != 0 and ui->txt_senha_acesso->text().size() != 0){
-            QString nome = ui->txt_nome->text();
-            QString sexo = ui->combo_sexo->currentText();
-            QString raca = ui->combo_raca->currentText();
-            QString idade = ui->txt_idade->text();
-            QString responsavel = ui->txt_responsavel->text();
-            QString adestrador = ui->txt_adestrador->text();
-            QString avaliador1 = ui->txt_avaliador1->text();
-            QString avaliador2 = ui->txt_avaliador2->text();
-            float nota1 = (ui->txt_nota1->text().toFloat());
-            float nota2 = (ui->txt_nota2->text().toFloat());
-            if(ui->txt_senha_acesso->text() != "201916100"){
-                  senha_acesso = false;
+    if(c.setNome(ui->txt_nome->text()) or c.setResponsavel(ui->txt_responsavel->text()) or c.setAdestrador(ui->txt_adestrador->text()) or c.setAvaliador1(ui->txt_avaliador1->text()) or c.setAvaliador2(ui->txt_avaliador2->text())){
+        QMessageBox::warning(this, "","");
+
+    }else if(ui->txt_senha_acesso->text() == "201916100"){
+            c.setSexo(ui->combo_sexo->currentText());
+            c.setRaca(ui->combo_raca->currentText());
+            c.setIdade(ui->txt_idade->text().toInt());
+            c.setNota1(ui->txt_nota1->text().toInt());
+            c.setNota2(ui->txt_nota2->text().toInt());
+
+            if(!a.NomeRepetido(a, c)){
+                a.btn_inserirDados(c);
+                inserirDadosNaTabela();
+            }else{
+                QMessageBox::warning(this, "","");
             }
 
-            Caes c(nome,sexo,raca,idade,responsavel,adestrador,avaliador1,avaliador2,nota1,nota2);
-
-            if(senha_acesso == true){
-                 a.btn_inserirDados(c);
-                 qrow = ui->tabela_provarealizada->rowCount();
-                 ui->tabela_provarealizada->insertRow(qrow);
-                 inserirDadosNaTabela(c,qrow);
-
-                 ui->tabela_provarealizada->setColumnWidth(0,120);
-                 ui->tabela_provarealizada->setColumnWidth(1,80);
-                 ui->tabela_provarealizada->setColumnWidth(2,190);
-                 ui->tabela_provarealizada->setColumnWidth(3,80);
-                 ui->tabela_provarealizada->setColumnWidth(4,100);
-                 ui->tabela_provarealizada->setColumnWidth(5,110);
-                 ui->tabela_provarealizada->setColumnWidth(6,120);
-
-                 ui->txt_nome->clear();
-                 ui->combo_sexo->setCurrentText("Selecione o sexo");
-                 ui->combo_raca->setCurrentText("Selecione a raça");
-                 ui->txt_idade->clear();
-                 ui->txt_responsavel->clear();
-                 ui->txt_adestrador->clear();
-                 ui->txt_avaliador1->clear();
-                 ui->txt_avaliador2->clear();
-                 ui->txt_nota1->clear();
-                 ui->txt_nota2->clear();
-                 ui->txt_senha_acesso->clear();
-                 }
-
-            if(senha_acesso == false){
-                 QMessageBox::information(this,"Senha Acesso","Senha Inválida, tente novamente!");
-                 ui->txt_senha_acesso->clear();
-                 }
-
     }else{
-         QMessageBox::information(this,"Dados incompletos","Dados Incompletos, tente novamente!");
-         ui->txt_senha_acesso->clear();
+        QMessageBox::information(this,"Senha incorreta","Digite uma senha válida!");
+            ui->txt_senha_acesso->clear();
     }
+
+        ui->txt_nome->clear();
+        ui->combo_sexo->setCurrentText("Selecione o sexo");
+        ui->combo_raca->setCurrentText("Selecione a raça");
+        ui->txt_idade->setValue(0);
+        ui->txt_responsavel->clear();
+        ui->txt_adestrador->clear();
+        ui->txt_avaliador1->clear();
+        ui->txt_avaliador2->clear();
+        ui->txt_nota1->setValue(0);
+        ui->txt_nota2->setValue(0);
+        ui->txt_senha_acesso->clear();
 }
-void MainWindow::inserirDadosNaTabela(Caes c, int row)
+void MainWindow::inserirDadosNaTabela()
 
 {
-    ui->tabela_provarealizada->setItem(row,0, new QTableWidgetItem(c.getNome()));
-    ui->tabela_provarealizada->setItem(row,1, new QTableWidgetItem(QString::number(c.CalcularMedia())));
-    ui->tabela_provarealizada->setItem(row,2, new QTableWidgetItem(c.getRaca()));
-    ui->tabela_provarealizada->setItem(row,3, new QTableWidgetItem(c.getIdade()));
-    ui->tabela_provarealizada->setItem(row,4, new QTableWidgetItem(c.getSexo()));
-    ui->tabela_provarealizada->setItem(row,5, new QTableWidgetItem(c.getResponsavel()));
-    ui->tabela_provarealizada->setItem(row,6, new QTableWidgetItem(c.getAdestrador()));
+    ui->tabela_provarealizada->setRowCount(0);
+
+    int linhas = 0;
+
+    QVector<Caes> temp = a.getLista();
+
+    for(auto preencher : temp){
+
+    ui->tabela_provarealizada->insertRow(linhas);
+
+    ui->tabela_provarealizada->setItem(linhas,0, new QTableWidgetItem(preencher.getNome()));
+    ui->tabela_provarealizada->setItem(linhas,1, new QTableWidgetItem(QString::number(preencher.getMedia())));
+    ui->tabela_provarealizada->setItem(linhas,2, new QTableWidgetItem(preencher.getRaca()));
+    ui->tabela_provarealizada->setItem(linhas,3, new QTableWidgetItem(QString::number(preencher.getIdade())));
+    ui->tabela_provarealizada->setItem(linhas,4, new QTableWidgetItem(preencher.getSexo()));
+    ui->tabela_provarealizada->setItem(linhas,5, new QTableWidgetItem(preencher.getResponsavel()));
+    ui->tabela_provarealizada->setItem(linhas,6, new QTableWidgetItem(preencher.getAdestrador()));
+    }
 }
 
 void MainWindow::on_btn_limpardados_clicked()
@@ -90,13 +90,13 @@ void MainWindow::on_btn_limpardados_clicked()
     ui->txt_nome->clear();
     ui->combo_sexo->setCurrentText("Selecione o sexo");
     ui->combo_raca->setCurrentText("Selecione a raça");
-    ui->txt_idade->clear();
+    ui->txt_idade->setValue(0);
     ui->txt_responsavel->clear();
     ui->txt_adestrador->clear();
     ui->txt_avaliador1->clear();
     ui->txt_avaliador2->clear();
-    ui->txt_nota1->clear();
-    ui->txt_nota2->clear();
+    ui->txt_nota1->setValue(0);
+    ui->txt_nota2->setValue(0);
     ui->txt_senha_acesso->clear();
 }
 
@@ -105,25 +105,28 @@ void MainWindow::on_btn_ordenar_clicked()
     if(ui->sel_nome->isChecked()) {
         ui->tabela_provarealizada->clearContents();
         a.ordenarListaNome();
-        for(int i = 0; i < a.size(); i++){
-            inserirDadosNaTabela(a[i],i);
-        }
+//        for(int i = 0; i < a.size(); i++){
+//            inserirDadosNaTabela(a[i],i);
+//        }
+        inserirDadosNaTabela();
 
     }else if (ui->sel_media->isChecked()) {
             ui->tabela_provarealizada->clearContents();
             a.ordenarListaMedia();
-            for(int i = 0; i< a.size(); i++)
-            for(int i = 0; i < a.size(); i++){
-                inserirDadosNaTabela(a[i],i);
-            }
+//            for(int i = 0; i< a.size(); i++)
+//            for(int i = 0; i < a.size(); i++){
+//                inserirDadosNaTabela(a[i],i);}
+            inserirDadosNaTabela();
+
 
     }else if (ui->sel_raca->isChecked()) {
            ui->tabela_provarealizada->clearContents();
            a.ordenarListaRaca();
-           for (int i = 0; i < a.size(); i++)
-           for(int i = 0; i < a.size(); i++){
-               inserirDadosNaTabela(a[i],i);
-           }
+//           for (int i = 0; i < a.size(); i++)
+//           for(int i = 0; i < a.size(); i++){
+//               inserirDadosNaTabela(a[i],i);
+//           }
+           inserirDadosNaTabela();
 
     }else{
            QMessageBox::warning(this,"Erro","Selecione uma das opções!");
@@ -159,31 +162,14 @@ void MainWindow::Carregar()
     }else{
         ui->tabela_provarealizada->clearContents();
         on_actionLimpar_Tabela_triggered();
-        for (int i = 0;i<a.size();i++) {
-            ui->tabela_provarealizada->insertRow(i);
-            inserirDadosNaTabela(a[i],i);
-            QMessageBox::information(this,"Arquivo","O Arquivo foi lido, cheque a tabela!");
-            }
+//        for (int i = 0;i<a.size();i++) {
+//            ui->tabela_provarealizada->insertRow(i);
+//            inserirDadosNaTabela(a[i],i);
+//            QMessageBox::information(this,"Arquivo","O Arquivo foi lido, cheque a tabela!");
+//            }
+        inserirDadosNaTabela();
        }
 }
-
-/*void MainWindow::Carregar()
-    {
-        QString arqname = QFileDialog::getOpenFileName(this, "Lista de Livros Lidos","","Texto Puro(*.txt);;Arquivos Separado por Vírgulas(*.csv)");
-        a.clear();
-
-        if(Arquivo::carregarLista(arqname,a)){
-
-            ui->tabela_provarealizada->clearContents();
-            for(int i = 0; i < a.size(); i++){
-                if(i >= ui->tabela_provarealizada->rowCount())
-                    ui->tabela_provarealizada->insertRow(i);
-                inserirDadosNaTabela(a[i],i);
-            }
-        }else{
-            QMessageBox::information(this, "Carregar Lista de Livros Lidos", "Não foi possível carregar!");
-        }
-    }*/
 
 void MainWindow::on_actionLimpar_Tabela_triggered()
 {
@@ -205,17 +191,10 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
         bool ok;
         QString txt = QInputDialog::getText(this, "Alterar Nome", "Digite o novo Nome", QLineEdit::Normal,"",&ok);
         if(ok and !txt.isEmpty()){
-        Caes temp;
-            temp.setNome(txt);
-            //temp.setMedia(a[row].CalcularMedia());
-            temp.setRaca(a[row].getRaca());
-            temp.setIdade(a[row].getIdade());
-            temp.setSexo(a[row].getSexo());
-            temp.setResponsavel(a[row].getResponsavel());
-            temp.setAdestrador(a[row].getAdestrador());
-            a.eraseNome(txt);
-            a.btn_inserirDados(temp);
-            ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getNome()));
+
+            a.mudarObjeto(row, column, txt);
+          //  a.eraseNome(txt);
+            inserirDadosNaTabela();
         }else{
            QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
            }
@@ -228,17 +207,19 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
                bool ok;
                QString txt = QInputDialog::getText(this, "Alterar Nota Avaliador 1", "Nota Avaliador 1", QLineEdit::Normal,"",&ok);
                if(ok and !txt.isEmpty()){
-                   a.setNota1(row,txt.toFloat());
+                   qDebug() << "linha" << row;
+                   a.mudarObjeto(row, column, txt.toInt());
+
                }
 
                QString txt1 = QInputDialog::getText(this, "Alterar Nota Avaliador 2", "Nota Avaliador 2", QLineEdit::Normal,"",&ok);
                if(ok and !txt1.isEmpty()){
-                   a.setNota2(row,txt1.toFloat());
+                   a.mudarObjeto(row, column + 1, txt.toInt());
+
                }
 
-                   a.find(row).CalcularMedia();
-                   a.eraseNome(txt);
-               inserirDadosNaTabela(a[row],row);
+                  // a.eraseNome(txt);
+               inserirDadosNaTabela();
            }else{
               QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
                }
@@ -248,20 +229,13 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
         QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você deseja editar este item?");
     if(resp == QMessageBox::Yes){
         bool ok;
-        QString txt = QInputDialog::getText(this, "Alterar Valor", "Digite o novo valor", QLineEdit::Normal,"",&ok);
+        QString txt = QInputDialog::getText(this, "Alterar Raça", "Digite a Raça", QLineEdit::Normal,"",&ok);
         if(ok and !txt.isEmpty()){
 
-            Caes temp;
-                temp.setNome(a[row].getNome());
-              //  temp.setMedia(a[row].CalcularMedia());
-                temp.setRaca(txt);
-                temp.setIdade(a[row].getIdade());
-                temp.setSexo(a[row].getSexo());
-                temp.setResponsavel(a[row].getResponsavel());
-                temp.setAdestrador(a[row].getAdestrador());
-                a.eraseNome(txt);
-                a.btn_inserirDados(temp);
-            ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getRaca()));
+            a.mudarObjeto(row, column, txt);
+            //a.eraseNome(txt);
+
+            inserirDadosNaTabela();
         }else{
            QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
             }
@@ -271,20 +245,12 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
         QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você deseja editar este item?");
     if(resp == QMessageBox::Yes){
         bool ok;
-        QString txt = QInputDialog::getText(this, "Alterar Data de Postagem", "Digite a nova data:",QLineEdit::Normal,"",&ok);
+        QString txt = QInputDialog::getText(this, "Alterar Idade", "Digite a idade:",QLineEdit::Normal,"",&ok);
         if(ok and !txt.isEmpty()){
 
-            Caes temp;
-                temp.setNome(a[row].getNome());
-              //  temp.setMedia(a[row].CalcularMedia());
-                temp.setRaca(a[row].getRaca());
-                temp.setIdade(txt);
-                temp.setSexo(a[row].getSexo());
-                temp.setResponsavel(a[row].getResponsavel());
-                temp.setAdestrador(a[row].getAdestrador());
-                a.eraseNome(txt);
-                a.btn_inserirDados(temp);
-            ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getIdade()));
+            a.mudarObjeto(row, column, txt.toInt());
+            //a.eraseNome(txt);
+            inserirDadosNaTabela();
         }else{
            QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
             }
@@ -294,20 +260,12 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
         QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você deseja editar este item?");
     if(resp == QMessageBox::Yes){
         bool ok;
-        QString txt = QInputDialog::getText(this, "Alterar Status do objeto", "Digite o novo status:", QLineEdit::Normal,"",&ok);
+        QString txt = QInputDialog::getText(this, "Alterar Sexo", "Digite o sexo:", QLineEdit::Normal,"",&ok);
         if(ok and !txt.isEmpty()){
 
-            Caes temp;
-                temp.setNome(a[row].getNome());
-              //  temp.setMedia(a[row].CalcularMedia());
-                temp.setRaca(a[row].getRaca());
-                temp.setIdade(a[row].getIdade());
-                temp.setSexo(txt);
-                temp.setResponsavel(a[row].getResponsavel());
-                temp.setAdestrador(a[row].getAdestrador());
-                a.eraseNome(txt);
-                a.btn_inserirDados(temp);
-            ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getSexo()));
+            a.mudarObjeto(row, column, txt);
+//            a.eraseNome(txt);
+            inserirDadosNaTabela();
         }else{
            QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
             }
@@ -320,17 +278,9 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
         QString txt = QInputDialog::getText(this, "Alterar Destino", "Digite o novo destino", QLineEdit::Normal,"",&ok);
         if(ok and !txt.isEmpty()){
 
-            Caes temp;
-                temp.setNome(a[row].getNome());
-              //  temp.setMedia(a[row].CalcularMedia());
-                temp.setRaca(a[row].getRaca());
-                temp.setIdade(a[row].getIdade());
-                temp.setSexo(a[row].getSexo());
-                temp.setResponsavel(txt);
-                temp.setAdestrador(a[row].getAdestrador());
-                a.eraseNome(txt);
-                a.btn_inserirDados(temp);
-            ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getResponsavel()));
+            a.mudarObjeto(row, column, txt);
+            //a.eraseNome(txt);
+            inserirDadosNaTabela();
         }else{
            QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
             }
@@ -340,19 +290,11 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
         QMessageBox::StandardButton resp = QMessageBox::question(this, "Editar Itens", "Você deseja editar este item?");
     if(resp == QMessageBox::Yes){
         bool ok;
-        QString txt = QInputDialog::getText(this, "Alterar Valor", "Digite o novo valor", QLineEdit::Normal,"",&ok);
+        QString txt = QInputDialog::getText(this, "Alterar Responsável", "Digite o responsável", QLineEdit::Normal,"",&ok);
         if(ok and !txt.isEmpty()){
-            Caes temp;
-                temp.setNome(a[row].getNome());
-              //  temp.setMedia(a[row].CalcularMedia());
-                temp.setRaca(a[row].getRaca());
-                temp.setIdade(a[row].getIdade());
-                temp.setSexo(a[row].getSexo());
-                temp.setResponsavel(a[row].getResponsavel());
-                temp.setAdestrador(txt);
-                a.eraseNome(txt);
-                a.btn_inserirDados(temp);
-           ui->tabela_provarealizada->setItem(row, column, new QTableWidgetItem(temp.getAdestrador()));
+            a.mudarObjeto(row, column, txt);
+            //a.eraseNome(txt);
+            inserirDadosNaTabela();
         }else{
            QMessageBox::critical(this, "Erro", "O objeto a ser editado está vazio.");
             }
@@ -363,6 +305,10 @@ void MainWindow::on_tabela_provarealizada_cellDoubleClicked(int row, int column)
 
 void MainWindow::on_btn_atualizar_clicked()
 {
+    int Feminino, Masculino;
+
+    std::tie(Feminino, Masculino)= a.contadorGenero(a);
+
     if(ui->tabela_provarealizada->rowCount() == 0){
            QMessageBox::warning(this, "Atualização", "Atualização Inválida! Preencha a Tabela!");
     }else{
@@ -380,9 +326,50 @@ void MainWindow::on_btn_atualizar_clicked()
           ui->txt_racaTerceiro->setText(a.Racaterceirolugar());
             }
           }
-      //    ui->txt_racadestaque->setText(a.racaDestaque());
+          ui->generofeminino->setText(QString::number(Feminino));
+          ui->generomasculino->setText(QString::number(Masculino));
+
          }
         }
 }
 
+void MainWindow::on_ExcluirDados_clicked()
+{
+    QMessageBox::StandardButton resp = QMessageBox::question(this, "Excluir Itens", "Você deseja excluir um item?");
+    if(resp == QMessageBox::Yes){
+        bool ok;
+
+        QString txt = QInputDialog::getText(this, "Excluir Itens", "Digite o título do livro(igualmente a como foi cadastrado) para excluí-lo", QLineEdit::Normal,"",&ok);
+
+        bool apagarNome = false;
+
+        for(int i = 0; i < a.size(); i++){
+            if(a.lista[i].getResponsavel() == txt){
+                a.eraseNome(txt, a);
+                apagarNome = true;
+                break;
+            }
+        }
+
+        if(apagarNome){
+            ui->tabela_provarealizada->setRowCount(0);
+            for(int i=0;i<a.size();i++){
+            ui->tabela_provarealizada->insertRow(i);
+            inserirNaTabela(a[i],i);
+            }
+        }
+    }
+}
+
+void MainWindow::inserirNaTabela(Caes k, int linhas)
+
+{
+    ui->tabela_provarealizada->setItem(linhas,0, new QTableWidgetItem(k.getNome()));
+    ui->tabela_provarealizada->setItem(linhas,1, new QTableWidgetItem(QString::number(k.getMedia())));
+    ui->tabela_provarealizada->setItem(linhas,2, new QTableWidgetItem(k.getRaca()));
+    ui->tabela_provarealizada->setItem(linhas,3, new QTableWidgetItem(QString::number(k.getIdade())));
+    ui->tabela_provarealizada->setItem(linhas,4, new QTableWidgetItem(k.getSexo()));
+    ui->tabela_provarealizada->setItem(linhas,5, new QTableWidgetItem(k.getResponsavel()));
+    ui->tabela_provarealizada->setItem(linhas,6, new QTableWidgetItem(k.getAdestrador()));
+}
 

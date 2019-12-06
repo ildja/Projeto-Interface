@@ -29,6 +29,7 @@ HEADERS += \
     mainwindow.h
 
 FORMS += \
+    Exclusao.ui \
     mainwindow.ui
 
 # Default rules for deployment.

@@ -8,21 +8,21 @@ private:
     QString nome;
     QString sexo;
     QString raca;
-    QString idade;
+    int idade;
     QString responsavel;
     QString adestrador;
     QString avaliador1;
     QString avaliador2;
-    float nota1;
-    float nota2;
-    float media;
+    int nota1;
+    int nota2;
+    double media;
 
 public:
     Caes();
     Caes(QString name, QString sex, QString raca, QString idad, QString resp, QString adest, QString avali1, QString avali2, float nota1, float nota2 /*, bool a*/);
 
     QString getNome()const;
-    void setNome(const QString &value);
+    bool setNome(const QString &value);
 
     QString getSexo()const;
     void setSexo(const QString &value);
@@ -30,30 +30,31 @@ public:
     QString getRaca()const;
     void setRaca(const QString &value);
 
-    QString getIdade()const;
-    void setIdade(const QString &value);
+    int getIdade()const;
+    void setIdade(const int &value);
 
     QString getResponsavel()const;
-    void setResponsavel(const QString &value);
+    bool setResponsavel(const QString &value);
 
     QString getAdestrador()const;
-    void setAdestrador(const QString &value);
+    bool setAdestrador(const QString &value);
 
     QString getAvaliador1()const;
-    void setAvaliador1(const QString &value);
+    bool setAvaliador1(const QString &value);
 
     QString getAvaliador2()const;
-    void setAvaliador2(const QString &value);
+    bool setAvaliador2(const QString &value);
 
-    float getNota1()const;
-    void setNota1(float value);
+    int getNota1()const;
+    void setNota1(int value);
 
-    float getNota2()const;
-    void setNota2(float value);
+    int getNota2()const;
+    void setNota2(int value);
 
-    float CalcularMedia()const;
-   float setMedia() const;
+    float CalcularMedia();
+    //float setMedia() const;
 
+    double getMedia() const;
 
 signals:
 
